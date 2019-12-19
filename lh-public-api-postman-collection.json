@@ -1,0 +1,793 @@
+{
+    "id": "28dfb1bcd70d9a5ce4a76904cd242fac",
+    "name": "LH Public API",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "ae6f7d58d28072d4cc495e23f06736a9",
+            "name": "Countries",
+            "url": "http:\/\/api.lufthansa.com\/v1\/references\/countries\/{countryCode}",
+            "description": "List all countries or one specific country. It is possible to request the response in a specific language.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "countryCode",
+                    "description": "2-letter ISO 3166-1 country code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "lang",
+                    "description": "2 letter ISO 3166-1 language code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of records skipped. Defaults to 0",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "rawModeData": ""
+        },
+        {
+            "id": "86d15e220e2a5f827b03847622f4355b",
+            "name": "Cities",
+            "url": "http:\/\/api.lufthansa.com\/v1\/references\/cities\/{cityCode}",
+            "description": "List all cities or one specific city. It is possible to request the response in a specific language.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "cityCode",
+                    "description": "3-letter IATA city code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "lang",
+                    "description": "2 letter ISO 3166-1 language code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of records skipped. Defaults to 0",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "rawModeData": ""
+        },
+        {
+            "id": "af041416473e78c09716aa2a9812bf56",
+            "name": "Airports",
+            "url": "http:\/\/api.lufthansa.com\/v1\/references\/airports\/{airportCode}",
+            "description": "List all airports or one specific airport. All airports response is very large. It is possible to request the response in a specific language.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "airportCode",
+                    "description": "3-letter IATA airport code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "lang",
+                    "description": "2 letter ISO 3166-1 language code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of records skipped. Defaults to 0",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "LHoperated",
+                    "description": "Restrict the results to locations with flights operated by LH (false=0, true=1)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "rawModeData": ""
+        },
+        {
+            "id": "b5d53fb3d6ab29aa33a985b8cf9b9041",
+            "name": "Nearest Airports",
+            "url": "http:\/\/api.lufthansa.com\/v1\/references\/airports\/nearest\/{latitude},{longitude}",
+            "description": "List the 5 closest airports to the given latitude and longitude, irrespective of the radius of the reference point.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "latitude",
+                    "description": "Latitude in decimal format to at most 3 decimal places",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "longitude",
+                    "description": "Longitude in decimal format to at most 3 decimal places",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "lang",
+                    "description": "2 letter ISO 3166-1 language code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "rawModeData": ""
+        },
+        {
+            "id": "c83e393b5ed5a17c56e2b894aa6a4d8e",
+            "name": "Airlines",
+            "url": "http:\/\/api.lufthansa.com\/v1\/references\/airlines\/{airlineCode}",
+            "description": "List all airlines or one specific airline.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "airlineCode",
+                    "description": "2-character IATA airline\/carrier code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of records skipped. Defaults to 0",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "rawModeData": ""
+        },
+        {
+            "id": "5ba585c471f17e489874d6efa4ac26bd",
+            "name": "Aircraft",
+            "url": "http:\/\/api.lufthansa.com\/v1\/references\/aircraft\/{aircraftCode}",
+            "description": "List all aircraft types or one specific aircraft type.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "aircraftCode",
+                    "description": "3-character IATA aircraft code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of records skipped. Defaults to 0",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "rawModeData": ""
+        },
+        {
+            "id": "deca213057111b870b336f2a82630a78",
+            "name": "Seat Maps",
+            "url": "http:\/\/api.lufthansa.com\/v1\/offers\/seatmaps\/{flightNumber}\/{origin}\/{destination}\/{date}\/{cabinClass}",
+            "description": "Cabin layout and seat characteristics.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "flightNumber",
+                    "description": "Flight number including carrier code and any suffix (e.g. 'LH2037')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "origin",
+                    "description": "Departure airport. 3-letter IATA airport code (e.g. 'TXL')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "destination",
+                    "description": "Destination airport. 3-letter IATA airport code (e.g. 'MUC')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Departure date (YYYY-MM-DD)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "cabinClass",
+                    "description": "Cabin class: 'M', 'E', 'C', 'F'. Some flights have fewer classes (Acceptable values are: \"M\", \"E\", \"C\", \"F\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "rawModeData": ""
+        },
+        {
+            "id": "de29c53fe8560f89ae346b076642dc0e",
+            "name": "Lounges",
+            "url": "http:\/\/api.lufthansa.com\/v1\/offers\/lounges\/{location}",
+            "description": "Lounge information",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "location",
+                    "description": "3-leter IATA airport or city code (e.g. 'ZRH')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "cabinClass",
+                    "description": "Cabin class: 'M', 'E', 'C', 'F' (Acceptable values are: \"\", \"M\", \"E\", \"C\", \"F\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "tierCode",
+                    "description": "Frequent flyer level ('FTL', 'SGC', 'SEN', 'HON') (Acceptable values are: \"\", \"FTL\", \"SGC\", \"SEN\", \"HON\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "lang",
+                    "description": "2 letter ISO 3166-1 language code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "rawModeData": ""
+        },
+        {
+            "id": "fc709b11c21d822c3e0dd442bd15d22f",
+            "name": "Flight Status",
+            "url": "http:\/\/api.lufthansa.com\/v1\/operations\/flightstatus\/{flightNumber}\/{date}",
+            "description": "Status of a particular flight (boarding, delayed, etc.).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "flightNumber",
+                    "description": "Flight number including carrier code and any suffix (e.g. 'LH2037')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Departure date (YYYY-MM-DD)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of records skipped. Defaults to 0",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "rawModeData": ""
+        },
+        {
+            "id": "b5bda5be9da7717b54a682dc53f81304",
+            "name": "Flight Status by Route",
+            "url": "http:\/\/api.lufthansa.com\/v1\/operations\/flightstatus\/route\/{origin}\/{destination}\/{date}",
+            "description": "Status of flights between a given origin and destination on a given date.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "origin",
+                    "description": "Departure airport. 3-letter IATA airport code (e.g. 'TXL')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "destination",
+                    "description": "Destination airport. 3-letter IATA airport code (e.g. 'MUC')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "date",
+                    "description": "Departure date (YYYY-MM-DD)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of records skipped. Defaults to 0",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "rawModeData": ""
+        },
+        {
+            "id": "7366f322db2ee2ce72e448b5999ed7a1",
+            "name": "Flight Status at Arrival Airport",
+            "url": "http:\/\/api.lufthansa.com\/v1\/operations\/flightstatus\/arrivals\/{airportCode}\/{fromDateTime}",
+            "description": "Status of all arrivals at a given airport up to 4 hours from the provided date time.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "airportCode",
+                    "description": "3-letter IATA airport code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromDateTime",
+                    "description": "Start of time range in local time of arrival airport (YYYY-MM-DDTHH:mm)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of records skipped. Defaults to 0",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "rawModeData": ""
+        },
+        {
+            "id": "7c0efb3225910c9e02c3cd4758ede959",
+            "name": "Flight Status at Departure Airport",
+            "url": "http:\/\/api.lufthansa.com\/v1\/operations\/flightstatus\/departures\/{airportCode}\/{fromDateTime}",
+            "description": "Status of all departures from a given airport up to 4 hours from the provided date time.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "airportCode",
+                    "description": "3-letter IATA airport code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromDateTime",
+                    "description": "Start of time range in local time of arrival airport (YYYY-MM-DDTHH:mm)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of records skipped. Defaults to 0",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "rawModeData": ""
+        },
+        {
+            "id": "6a64f073d917ddb38a88c5ac43b70a26",
+            "name": "Flight Schedules",
+            "url": "http:\/\/api.lufthansa.com\/v1\/operations\/schedules\/{origin}\/{destination}\/{fromDateTime}",
+            "description": "Scheduled flights between given airports on a given date.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "origin",
+                    "description": "Departure airport. 3-letter IATA airport code (e.g. 'TXL')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "destination",
+                    "description": "Destination airport. 3-letter IATA airport code (e.g. 'MUC')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromDateTime",
+                    "description": "Start of time range in local time of arrival airport (YYYY-MM-DDTHH:mm)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "directFlights",
+                    "description": "Show only direct flights (false=0, true=1). Default is false",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of records skipped. Defaults to 0",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "rawModeData": ""
+        },
+        {
+            "id": "47205e88b3d0ae68fab3f29930c75f27",
+            "name": "Shipment Tracking",
+            "url": "http:\/\/api.lufthansa.com\/v1\/cargo\/shipmentTracking\/{aWBPrefix}-{aWBNumber}",
+            "description": "With this tracking service you can easily retrieve your shipment or flight status information.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "aWBPrefix",
+                    "description": "aWBPrefix : Represents the airline that is the owner of this AWB, i.e. \"020\" = Lufthansa Cargo, format : [0-9]{3} e.g. 020",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "aWBNumber",
+                    "description": "aWBNumber : The Air Waybill Number , format : [0-9]{8} e.g. 08002050",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "rawModeData": ""
+        },
+        {
+            "id": "33cdc8b83e04c581202dde8fccee9eb7",
+            "name": "Retrieve all flights",
+            "url": "http:\/\/api.lufthansa.com\/v1\/cargo\/getRoute\/{origin}-{destination}\/{fromDate}\/{productCode}",
+            "description": "Retrieve a list of all possible flights (both direct and connecting) between two airports on a given date. Routes are available for today and up to days in the future.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "origin",
+                    "description": "Departure airport. 3-letter IATA airport code (e.g. 'TXL')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "destination",
+                    "description": "Destination airport. 3-letter IATA airport code (e.g. 'MUC')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fromDate",
+                    "description": "Departure date in the local time of the departure airport. Based on LAT (Latest Acceptance Time). format : yyyy-MM-dd eg : 2017-07-15",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "productCode",
+                    "description": "Product code for requested service and specials : 3-letter eg: YNZ",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "rawModeData": ""
+        }
+    ]
+}
