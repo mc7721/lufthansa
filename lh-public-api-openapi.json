@@ -1,0 +1,758 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0",
+        "title": "LH Public API",
+        "description": "",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.lufthansa.com\/v1"
+    ],
+    "paths": {
+        "\/references\/countries\/{countryCode}": {
+            "get": {
+                "summary": "Countries",
+                "description": "List all countries or one specific country. It is possible to request the response in a specific language.",
+                "operationId": "ReferencesCountriesByCountryCodeGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "countryCode",
+                        "in": "path",
+                        "description": "2-letter ISO 3166-1 country code"
+                    },
+                    {
+                        "name": "lang",
+                        "in": "query",
+                        "description": "2 letter ISO 3166-1 language code"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)"
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of records skipped. Defaults to 0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/AirportResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/references\/cities\/{cityCode}": {
+            "get": {
+                "summary": "Cities",
+                "description": "List all cities or one specific city. It is possible to request the response in a specific language.",
+                "operationId": "ReferencesCitiesByCityCodeGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "cityCode",
+                        "in": "path",
+                        "description": "3-letter IATA city code"
+                    },
+                    {
+                        "name": "lang",
+                        "in": "query",
+                        "description": "2 letter ISO 3166-1 language code"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)"
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of records skipped. Defaults to 0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/AirportResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/references\/airports\/{airportCode}": {
+            "get": {
+                "summary": "Airports",
+                "description": "List all airports or one specific airport. All airports response is very large. It is possible to request the response in a specific language.",
+                "operationId": "ReferencesAirportsByAirportCodeGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "airportCode",
+                        "in": "path",
+                        "description": "3-letter IATA airport code"
+                    },
+                    {
+                        "name": "lang",
+                        "in": "query",
+                        "description": "2 letter ISO 3166-1 language code"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)"
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of records skipped. Defaults to 0"
+                    },
+                    {
+                        "name": "LHoperated",
+                        "in": "query",
+                        "description": "Restrict the results to locations with flights operated by LH (false=0, true=1)"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/AirportResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/references\/airports\/nearest\/{latitude},{longitude}": {
+            "get": {
+                "summary": "Nearest Airports",
+                "description": "List the 5 closest airports to the given latitude and longitude, irrespective of the radius of the reference point.",
+                "operationId": "ReferencesAirportsNearestByLatitudeAndLongitudeGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "latitude",
+                        "in": "path",
+                        "description": "Latitude in decimal format to at most 3 decimal places"
+                    },
+                    {
+                        "name": "longitude",
+                        "in": "path",
+                        "description": "Longitude in decimal format to at most 3 decimal places"
+                    },
+                    {
+                        "name": "lang",
+                        "in": "query",
+                        "description": "2 letter ISO 3166-1 language code"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/AirportResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/references\/airlines\/{airlineCode}": {
+            "get": {
+                "summary": "Airlines",
+                "description": "List all airlines or one specific airline.",
+                "operationId": "ReferencesAirlinesByAirlineCodeGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "airlineCode",
+                        "in": "path",
+                        "description": "2-character IATA airline\/carrier code"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)"
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of records skipped. Defaults to 0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/AirportResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/references\/aircraft\/{aircraftCode}": {
+            "get": {
+                "summary": "Aircraft",
+                "description": "List all aircraft types or one specific aircraft type.",
+                "operationId": "ReferencesAircraftByAircraftCodeGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "aircraftCode",
+                        "in": "path",
+                        "description": "3-character IATA aircraft code"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)"
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of records skipped. Defaults to 0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/AirportResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/offers\/seatmaps\/{flightNumber}\/{origin}\/{destination}\/{date}\/{cabinClass}": {
+            "get": {
+                "summary": "Seat Maps",
+                "description": "Cabin layout and seat characteristics.",
+                "operationId": "OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "flightNumber",
+                        "in": "path",
+                        "description": "Flight number including carrier code and any suffix (e.g. 'LH2037')"
+                    },
+                    {
+                        "name": "origin",
+                        "in": "path",
+                        "description": "Departure airport. 3-letter IATA airport code (e.g. 'TXL')"
+                    },
+                    {
+                        "name": "destination",
+                        "in": "path",
+                        "description": "Destination airport. 3-letter IATA airport code (e.g. 'MUC')"
+                    },
+                    {
+                        "name": "date",
+                        "in": "path",
+                        "description": "Departure date (YYYY-MM-DD)"
+                    },
+                    {
+                        "name": "cabinClass",
+                        "in": "path",
+                        "description": "Cabin class: 'M', 'E', 'C', 'F'. Some flights have fewer classes (Acceptable values are: \"M\", \"E\", \"C\", \"F\")"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/AirportResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/offers\/lounges\/{location}": {
+            "get": {
+                "summary": "Lounges",
+                "description": "Lounge information",
+                "operationId": "OffersLoungesByLocationGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "location",
+                        "in": "path",
+                        "description": "3-leter IATA airport or city code (e.g. 'ZRH')"
+                    },
+                    {
+                        "name": "cabinClass",
+                        "in": "query",
+                        "description": "Cabin class: 'M', 'E', 'C', 'F' (Acceptable values are: \"\", \"M\", \"E\", \"C\", \"F\")"
+                    },
+                    {
+                        "name": "tierCode",
+                        "in": "query",
+                        "description": "Frequent flyer level ('FTL', 'SGC', 'SEN', 'HON') (Acceptable values are: \"\", \"FTL\", \"SGC\", \"SEN\", \"HON\")"
+                    },
+                    {
+                        "name": "lang",
+                        "in": "query",
+                        "description": "2 letter ISO 3166-1 language code"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/AirportResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/operations\/flightstatus\/{flightNumber}\/{date}": {
+            "get": {
+                "summary": "Flight Status",
+                "description": "Status of a particular flight (boarding, delayed, etc.).",
+                "operationId": "OperationsFlightstatusByFlightNumberAndDateGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "flightNumber",
+                        "in": "path",
+                        "description": "Flight number including carrier code and any suffix (e.g. 'LH2037')"
+                    },
+                    {
+                        "name": "date",
+                        "in": "path",
+                        "description": "Departure date (YYYY-MM-DD)"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)"
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of records skipped. Defaults to 0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/AirportResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/operations\/flightstatus\/route\/{origin}\/{destination}\/{date}": {
+            "get": {
+                "summary": "Flight Status by Route",
+                "description": "Status of flights between a given origin and destination on a given date.",
+                "operationId": "OperationsFlightstatusRouteDateByOriginAndDestinationGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "origin",
+                        "in": "path",
+                        "description": "Departure airport. 3-letter IATA airport code (e.g. 'TXL')"
+                    },
+                    {
+                        "name": "destination",
+                        "in": "path",
+                        "description": "Destination airport. 3-letter IATA airport code (e.g. 'MUC')"
+                    },
+                    {
+                        "name": "date",
+                        "in": "path",
+                        "description": "Departure date (YYYY-MM-DD)"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)"
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of records skipped. Defaults to 0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/AirportResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/operations\/flightstatus\/arrivals\/{airportCode}\/{fromDateTime}": {
+            "get": {
+                "summary": "Flight Status at Arrival Airport",
+                "description": "Status of all arrivals at a given airport up to 4 hours from the provided date time.",
+                "operationId": "OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "airportCode",
+                        "in": "path",
+                        "description": "3-letter IATA airport code"
+                    },
+                    {
+                        "name": "fromDateTime",
+                        "in": "path",
+                        "description": "Start of time range in local time of arrival airport (YYYY-MM-DDTHH:mm)"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)"
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of records skipped. Defaults to 0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/AirportResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/operations\/flightstatus\/departures\/{airportCode}\/{fromDateTime}": {
+            "get": {
+                "summary": "Flight Status at Departure Airport",
+                "description": "Status of all departures from a given airport up to 4 hours from the provided date time.",
+                "operationId": "OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "airportCode",
+                        "in": "path",
+                        "description": "3-letter IATA airport code"
+                    },
+                    {
+                        "name": "fromDateTime",
+                        "in": "path",
+                        "description": "Start of time range in local time of arrival airport (YYYY-MM-DDTHH:mm)"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)"
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of records skipped. Defaults to 0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/AirportResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/operations\/schedules\/{origin}\/{destination}\/{fromDateTime}": {
+            "get": {
+                "summary": "Flight Schedules",
+                "description": "Scheduled flights between given airports on a given date.",
+                "operationId": "OperationsSchedulesFromDateTimeByOriginAndDestinationGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "origin",
+                        "in": "path",
+                        "description": "Departure airport. 3-letter IATA airport code (e.g. 'TXL')"
+                    },
+                    {
+                        "name": "destination",
+                        "in": "path",
+                        "description": "Destination airport. 3-letter IATA airport code (e.g. 'MUC')"
+                    },
+                    {
+                        "name": "fromDateTime",
+                        "in": "path",
+                        "description": "Start of time range in local time of arrival airport (YYYY-MM-DDTHH:mm)"
+                    },
+                    {
+                        "name": "directFlights",
+                        "in": "query",
+                        "description": "Show only direct flights (false=0, true=1). Default is false"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)"
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of records skipped. Defaults to 0"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/AirportResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/cargo\/shipmentTracking\/{aWBPrefix}-{aWBNumber}": {
+            "get": {
+                "summary": "Shipment Tracking",
+                "description": "With this tracking service you can easily retrieve your shipment or flight status information.",
+                "operationId": "CargoShipmentTrackingByAWBPrefixAndAWBNumberGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "aWBPrefix",
+                        "in": "path",
+                        "description": "aWBPrefix : Represents the airline that is the owner of this AWB, i.e. \"020\" = Lufthansa Cargo, format : [0-9]{3} e.g. 020"
+                    },
+                    {
+                        "name": "aWBNumber",
+                        "in": "path",
+                        "description": "aWBNumber : The Air Waybill Number , format : [0-9]{8} e.g. 08002050"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/AirportResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/cargo\/getRoute\/{origin}-{destination}\/{fromDate}\/{productCode}": {
+            "get": {
+                "summary": "Retrieve all flights",
+                "description": "Retrieve a list of all possible flights (both direct and connecting) between two airports on a given date. Routes are available for today and up to days in the future.",
+                "operationId": "CargoGetRouteFromDateProductCodeByOriginAndDestinationGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "origin",
+                        "in": "path",
+                        "description": "Departure airport. 3-letter IATA airport code (e.g. 'TXL')"
+                    },
+                    {
+                        "name": "destination",
+                        "in": "path",
+                        "description": "Destination airport. 3-letter IATA airport code (e.g. 'MUC')"
+                    },
+                    {
+                        "name": "fromDate",
+                        "in": "path",
+                        "description": "Departure date in the local time of the departure airport. Based on LAT (Latest Acceptance Time). format : yyyy-MM-dd eg : 2017-07-15"
+                    },
+                    {
+                        "name": "productCode",
+                        "in": "path",
+                        "description": "Product code for requested service and specials : 3-letter eg: YNZ"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/AirportResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Coordinate": {
+                "type": "object",
+                "properties": {
+                    "Latitude": {
+                        "description": "Decimal latitude. Range: -90 (South Pole) to +90 (North Pole), e.g. \u201c51.540\u201d.",
+                        "type": "number"
+                    },
+                    "Longitude": {
+                        "description": "Decimal longitude. Range: -180 (West of Prime Meridian) to +180 (East of Prime Meridian).",
+                        "type": "number"
+                    }
+                }
+            },
+            "Name": {
+                "type": "object",
+                "properties": {
+                    "@LanguageCode": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "$": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Link": {
+                "type": "object",
+                "properties": {
+                    "@Href": {
+                        "description": "Link to actual a resource.",
+                        "type": "string"
+                    },
+                    "@Rel": {
+                        "description": "Specifying kind of link such as \u2018self\u2019 (link that returned this response), \u2018alternate\u2019 (link that points to another resource) or \u2018related\u2019 (link that points to related resource).",
+                        "type": "string"
+                    }
+                }
+            },
+            "Airport": {
+                "type": "object",
+                "properties": {
+                    "AirportCode": {
+                        "description": "3-letter IATA airport code, e.g. \u201cTXL\u201d.",
+                        "type": "string"
+                    },
+                    "Position": {
+                        "description": "Physical location of an airport. This data section is optional and therefore not always present.",
+                        "type": "object"
+                    },
+                    "CityCode": {
+                        "description": "3-letter IATA city code, e.g. \u201cBER\u201d.",
+                        "type": "string"
+                    },
+                    "CountryCode": {
+                        "description": "2-letter ISO 3166-1 country code, e.g. \u201cDE\u201d.",
+                        "type": "string"
+                    },
+                    "LocationType": {
+                        "description": " \u201cAirport\u201d, \u201cRailwayStation\u201d or \u201cBusStation\u201d.",
+                        "type": "string"
+                    },
+                    "Names": {
+                        "description": "Container for airport names.",
+                        "type": "object"
+                    },
+                    "UtcOffset": {
+                        "description": "Hour offset of airport to UTC time zone",
+                        "type": "number"
+                    },
+                    "TimeZoneId": {
+                        "description": "Time zone name airport is in",
+                        "type": "string"
+                    }
+                }
+            },
+            "Position": {
+                "type": "object"
+            },
+            "Names": {
+                "type": "object"
+            },
+            "AirportResource": {
+                "type": "object",
+                "properties": {
+                    "Airports": {
+                        "description": "Container for airport elements.",
+                        "type": "object"
+                    },
+                    "Meta": {
+                        "description": "Container for meta links.",
+                        "type": "object"
+                    }
+                }
+            },
+            "Airports": {
+                "type": "object"
+            },
+            "Meta": {
+                "type": "object"
+            },
+            "AirportResponse": {
+                "type": "object",
+                "properties": {
+                    "AirportResource": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            }
+        }
+    }
+}
