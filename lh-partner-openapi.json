@@ -1,0 +1,782 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0",
+        "title": "LH Partner",
+        "description": "",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.lufthansa.com\/v1"
+    ],
+    "paths": {
+        "\/baggage\/baggagetripandcontact\/{searchID}": {
+            "get": {
+                "summary": "Baggage Trip and Contact",
+                "description": "Retrieve passenger trip, contact and baggage details. This service is only accessible for LH privileged partners",
+                "operationId": "BaggageBaggagetripandcontactSearchIDGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "searchID",
+                        "in": "path",
+                        "description": "Bag tag number, PNR, boarding card or FQTV ID"
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")"
+                    }
+                ]
+            }
+        },
+        "\/offers\/fares\/allfares": {
+            "get": {
+                "summary": "All Fares",
+                "description": "Retrieves all available fares for a specific Origin & Destination pair on a given date. Available fares are: One-way and Return for 4U. Return only for OS",
+                "operationId": "OffersFaresAllfaresGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "catalogues",
+                        "in": "query",
+                        "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS')."
+                    },
+                    {
+                        "name": "origin",
+                        "in": "query",
+                        "description": "Enter journey origin (e.g 'FRA')."
+                    },
+                    {
+                        "name": "destination",
+                        "in": "query",
+                        "description": "Enter journey destination (e.g 'MAD')."
+                    },
+                    {
+                        "name": "travel",
+                        "in": "query",
+                        "description": "Enter journey travel-date (e.g 2016-10-20)"
+                    },
+                    {
+                        "name": "return",
+                        "in": "query",
+                        "description": "Enter journey return-date (e.g 2016-10-31)'."
+                    },
+                    {
+                        "name": "cabin",
+                        "in": "query",
+                        "description": "Enter the required cabin class (e.g econonmy, business etc.). (Acceptable values are: \"\", \"economy\", \"premium economy\", \"business\", \"first\")"
+                    },
+                    {
+                        "name": "travelers",
+                        "in": "query",
+                        "description": "Specifies the type and number of travelers (e.g. '(adult=2;child=2;infant=1)') For LH only (adult=1) possible."
+                    },
+                    {
+                        "name": "fare",
+                        "in": "query",
+                        "description": "Mandatory for 4U. Specifies, which fares to be returned, such as basic, smart, best, smartflex, bestflex . (Acceptable values are: \"\", \"basic\", \"smart\", \"best\", \"smartflex\", \"bestflex\")"
+                    },
+                    {
+                        "name": "trackingid",
+                        "in": "query",
+                        "description": "Austrian Airlines only - specify the web tracking id to be used in OS Deep link."
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")"
+                    }
+                ]
+            }
+        },
+        "\/offers\/fares\/bestfares": {
+            "get": {
+                "summary": "Best Fares",
+                "description": "Retrieve best fares for the requested journey across multiple days or multiple months.",
+                "operationId": "OffersFaresBestfaresGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "catalogues",
+                        "in": "query",
+                        "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS')."
+                    },
+                    {
+                        "name": "origin",
+                        "in": "query",
+                        "description": "Enter journey origin (e.g 'FRA')."
+                    },
+                    {
+                        "name": "destination",
+                        "in": "query",
+                        "description": "Enter journey destination (e.g 'MAD')."
+                    },
+                    {
+                        "name": "travel",
+                        "in": "query",
+                        "description": "Enter journey travel-date (e.g 2016-10-20)"
+                    },
+                    {
+                        "name": "trip",
+                        "in": "query",
+                        "description": "Trip duration in days (e.g. '7')"
+                    },
+                    {
+                        "name": "range",
+                        "in": "query",
+                        "description": "Fare range: 'byday' or 'bymonth' (Acceptable values are: \"byday\", \"bymonth\")"
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")"
+                    },
+                    {
+                        "name": "cabin",
+                        "in": "query",
+                        "description": "Enter the required cabin class (e.g econonmy, business etc.). (Acceptable values are: \"\", \"economy\", \"premium economy\", \"business\", \"first\")"
+                    },
+                    {
+                        "name": "country",
+                        "in": "query",
+                        "description": "Country code of requestor. 2-letter ISO 3166-1 country code (e.g. 'de')"
+                    },
+                    {
+                        "name": "trackingid",
+                        "in": "query",
+                        "description": "Austrian Airlines only - specify the web tracking id to be used in OS Deep link."
+                    },
+                    {
+                        "name": "fare",
+                        "in": "query",
+                        "description": "Mandatory for 4U. Specifies, which fares to be returned, such as basic, smart, best, smartflex, bestflex . (Acceptable values are: \"\", \"basic\", \"smart\", \"best\", \"smartflex\", \"bestflex\")"
+                    }
+                ]
+            }
+        },
+        "\/offers\/fares\/deeplink": {
+            "get": {
+                "summary": "Deep Links",
+                "description": "Returns valid deep links for the provided input parameters",
+                "operationId": "OffersFaresDeeplinkGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "catalogues",
+                        "in": "query",
+                        "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS')."
+                    },
+                    {
+                        "name": "trackingid",
+                        "in": "query",
+                        "description": "Austrian Airlines only - specify the web tracking id to be used in OS Deep link."
+                    },
+                    {
+                        "name": "country",
+                        "in": "query",
+                        "description": "Country code of requestor. 2-letter ISO 3166-1 country code (e.g. 'de')"
+                    },
+                    {
+                        "name": "lang",
+                        "in": "query",
+                        "description": "2-letter ISO 3166-1 language code"
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")"
+                    },
+                    {
+                        "name": "origin",
+                        "in": "query",
+                        "description": "Enter journey origin (e.g 'FRA')."
+                    },
+                    {
+                        "name": "destination",
+                        "in": "query",
+                        "description": "Enter journey destination (e.g 'MAD')."
+                    },
+                    {
+                        "name": "travel",
+                        "in": "query",
+                        "description": "Enter journey travel-date (e.g 2016-10-20)"
+                    },
+                    {
+                        "name": "return",
+                        "in": "query",
+                        "description": "Enter journey return-date (e.g 2016-10-31)'."
+                    },
+                    {
+                        "name": "cabin",
+                        "in": "query",
+                        "description": "Enter the required cabin class (e.g econonmy, business etc.). (Acceptable values are: \"\", \"economy\", \"premium economy\", \"business\", \"first\")"
+                    },
+                    {
+                        "name": "outbound",
+                        "in": "query",
+                        "description": "Outbound flight segments in the sequence of travel (e.g. 'LH096;LH480')"
+                    },
+                    {
+                        "name": "travelers",
+                        "in": "query",
+                        "description": "Specifies the type and number of travelers (e.g. '(adult=2;child=2;infant=1)') For LH only (adult=1) possible."
+                    },
+                    {
+                        "name": "fare",
+                        "in": "query",
+                        "description": "Mandatory for 4U. Specifies, which fares to be returned, such as basic, smart, best, smartflex, bestflex . (Acceptable values are: \"\", \"basic\", \"smart\", \"best\", \"smartflex\", \"bestflex\")"
+                    },
+                    {
+                        "name": "net",
+                        "in": "query",
+                        "description": "Travel net fare. Total fare less taxes and charges (e.g. '1140')"
+                    },
+                    {
+                        "name": "partnerid",
+                        "in": "query",
+                        "description": "Deep link partner id (e.g. '1247')"
+                    },
+                    {
+                        "name": "encryption",
+                        "in": "query",
+                        "description": "Deep link encryption-key"
+                    }
+                ]
+            }
+        },
+        "\/offers\/fares\/deeplink\/ffp": {
+            "get": {
+                "summary": "LH Deep Links - FFP",
+                "description": "Returns valid LH deep links (FFP - links to flight selection screen on LH.COM)",
+                "operationId": "OffersFaresDeeplinkFfpGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "catalogues",
+                        "in": "query",
+                        "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS')."
+                    },
+                    {
+                        "name": "origin",
+                        "in": "query",
+                        "description": "Enter journey origin (e.g 'FRA')."
+                    },
+                    {
+                        "name": "destination",
+                        "in": "query",
+                        "description": "Enter journey destination (e.g 'MAD')."
+                    },
+                    {
+                        "name": "travel",
+                        "in": "query",
+                        "description": "Enter journey travel-date (e.g 2016-10-20)"
+                    },
+                    {
+                        "name": "trackingid",
+                        "in": "query",
+                        "description": "Austrian Airlines only - specify the web tracking id to be used in OS Deep link."
+                    },
+                    {
+                        "name": "country",
+                        "in": "query",
+                        "description": "Country code of requestor. 2-letter ISO 3166-1 country code (e.g. 'de')"
+                    },
+                    {
+                        "name": "lang",
+                        "in": "query",
+                        "description": "2-letter ISO 3166-1 language code"
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")"
+                    },
+                    {
+                        "name": "return",
+                        "in": "query",
+                        "description": "Enter journey return-date (e.g 2016-10-31)'."
+                    },
+                    {
+                        "name": "cabin",
+                        "in": "query",
+                        "description": "Enter the required cabin class (e.g econonmy, business etc.). (Acceptable values are: \"\", \"economy\", \"premium economy\", \"business\", \"first\")"
+                    },
+                    {
+                        "name": "travelers",
+                        "in": "query",
+                        "description": "Specifies the type and number of travelers (e.g. '(adult=2;child=2;infant=1)') For LH only (adult=1) possible."
+                    },
+                    {
+                        "name": "partnerid",
+                        "in": "query",
+                        "description": "Deep link partner id (e.g. '1247')"
+                    },
+                    {
+                        "name": "encryption",
+                        "in": "query",
+                        "description": "Deep link encryption-key"
+                    }
+                ]
+            }
+        },
+        "\/offers\/fares\/deeplink\/itco": {
+            "get": {
+                "summary": "LH Deep Links - ITCO",
+                "description": "Returns valid LH deep links (ITCO - links to shopping cart on LH.COM)",
+                "operationId": "OffersFaresDeeplinkItcoGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "catalogues",
+                        "in": "query",
+                        "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS')."
+                    },
+                    {
+                        "name": "origin",
+                        "in": "query",
+                        "description": "Enter journey origin (e.g 'FRA')."
+                    },
+                    {
+                        "name": "destination",
+                        "in": "query",
+                        "description": "Enter journey destination (e.g 'MAD')."
+                    },
+                    {
+                        "name": "travel",
+                        "in": "query",
+                        "description": "Enter journey travel-date (e.g 2016-10-20)"
+                    },
+                    {
+                        "name": "outbound",
+                        "in": "query",
+                        "description": "Outbound flight segments in the sequence of travel (e.g. 'LH096;LH480')"
+                    },
+                    {
+                        "name": "fare",
+                        "in": "query",
+                        "description": "Mandatory for 4U. Specifies, which fares to be returned, such as basic, smart, best, smartflex, bestflex . (Acceptable values are: \"\", \"basic\", \"smart\", \"best\", \"smartflex\", \"bestflex\")"
+                    },
+                    {
+                        "name": "trackingid",
+                        "in": "query",
+                        "description": "Austrian Airlines only - specify the web tracking id to be used in OS Deep link."
+                    },
+                    {
+                        "name": "country",
+                        "in": "query",
+                        "description": "Country code of requestor. 2-letter ISO 3166-1 country code (e.g. 'de')"
+                    },
+                    {
+                        "name": "lang",
+                        "in": "query",
+                        "description": "2-letter ISO 3166-1 language code"
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")"
+                    },
+                    {
+                        "name": "return",
+                        "in": "query",
+                        "description": "Enter journey return-date (e.g 2016-10-31)'."
+                    },
+                    {
+                        "name": "cabin",
+                        "in": "query",
+                        "description": "Enter the required cabin class (e.g econonmy, business etc.). (Acceptable values are: \"\", \"economy\", \"premium economy\", \"business\", \"first\")"
+                    },
+                    {
+                        "name": "travelers",
+                        "in": "query",
+                        "description": "Specifies the type and number of travelers (e.g. '(adult=2;child=2;infant=1)') For LH only (adult=1) possible."
+                    },
+                    {
+                        "name": "net",
+                        "in": "query",
+                        "description": "Travel net fare. Total fare less taxes and charges (e.g. '1140')"
+                    },
+                    {
+                        "name": "partnerid",
+                        "in": "query",
+                        "description": "Deep link partner id (e.g. '1247')"
+                    },
+                    {
+                        "name": "encryption",
+                        "in": "query",
+                        "description": "Deep link encryption-key"
+                    }
+                ]
+            }
+        },
+        "\/offers\/fares\/fares": {
+            "get": {
+                "summary": "Fares",
+                "description": "Retrieve all available fares per fare family for a specific Origin & Destination on a given date",
+                "operationId": "Fares",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "catalogues",
+                        "in": "query",
+                        "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS')."
+                    },
+                    {
+                        "name": "segments",
+                        "in": "query",
+                        "description": "Journey details  e.g. (origin=TXL;destination=CGN;travel-date=2016-12-15;return-date=2016-12-20;cabin=Economy)"
+                    },
+                    {
+                        "name": "carriers",
+                        "in": "query",
+                        "description": "Include fares for these carriers e.g. ('4U;LH')"
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")"
+                    },
+                    {
+                        "name": "travelers",
+                        "in": "query",
+                        "description": "Specifies the type and number of travelers (e.g. '(adult=2;child=2;infant=1)') For LH only (adult=1) possible."
+                    },
+                    {
+                        "name": "fare",
+                        "in": "query",
+                        "description": "Mandatory for 4U. Specifies, which fares to be returned, such as basic, smart, best, smartflex, bestflex . (Acceptable values are: \"\", \"basic\", \"smart\", \"best\", \"smartflex\", \"bestflex\")"
+                    }
+                ]
+            }
+        },
+        "\/offers\/fares\/lowestfares": {
+            "get": {
+                "summary": "Lowest Fares",
+                "description": "Retrieve lowest fare for a specific Origin & Destination pair on a given date. Available fares are: One-way and Return for 4U. Return only for OS & LH",
+                "operationId": "OffersFaresLowestfaresGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "catalogues",
+                        "in": "query",
+                        "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS')."
+                    },
+                    {
+                        "name": "origin",
+                        "in": "query",
+                        "description": "Enter journey origin (e.g 'FRA')."
+                    },
+                    {
+                        "name": "destination",
+                        "in": "query",
+                        "description": "Enter journey destination (e.g 'MAD')."
+                    },
+                    {
+                        "name": "travel",
+                        "in": "query",
+                        "description": "Enter journey travel-date (e.g 2016-10-20)"
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")"
+                    },
+                    {
+                        "name": "return",
+                        "in": "query",
+                        "description": "Enter journey return-date (e.g 2016-10-31)'."
+                    },
+                    {
+                        "name": "cabin",
+                        "in": "query",
+                        "description": "Enter the required cabin class (e.g econonmy, business etc.). (Acceptable values are: \"\", \"economy\", \"premium economy\", \"business\", \"first\")"
+                    },
+                    {
+                        "name": "travelers",
+                        "in": "query",
+                        "description": "Specifies the type and number of travelers (e.g. '(adult=2;child=2;infant=1)') For LH only (adult=1) possible."
+                    },
+                    {
+                        "name": "fare",
+                        "in": "query",
+                        "description": "Mandatory for 4U. Specifies, which fares to be returned, such as basic, smart, best, smartflex, bestflex . (Acceptable values are: \"\", \"basic\", \"smart\", \"best\", \"smartflex\", \"bestflex\")"
+                    },
+                    {
+                        "name": "country",
+                        "in": "query",
+                        "description": "Country code of requestor. 2-letter ISO 3166-1 country code (e.g. 'de')"
+                    }
+                ]
+            }
+        },
+        "\/offers\/fares\/subscriptions": {
+            "get": {
+                "summary": "Fares Subscriptions",
+                "description": "Create a subscription for best price O&D. Receive regular updates on lowest fares",
+                "operationId": "OffersFaresSubscriptionsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "origin",
+                        "in": "query",
+                        "description": "Enter journey origin (e.g 'FRA')."
+                    },
+                    {
+                        "name": "destination",
+                        "in": "query",
+                        "description": "Enter journey destination (e.g 'MAD')."
+                    },
+                    {
+                        "name": "cabin",
+                        "in": "query",
+                        "description": "Enter the required cabin class (e.g econonmy, business etc.). (Acceptable values are: \"\", \"economy\", \"premium economy\", \"business\", \"first\")"
+                    },
+                    {
+                        "name": "trip",
+                        "in": "query",
+                        "description": "Trip duration in days (e.g. '7')"
+                    },
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "Email Address')"
+                    },
+                    {
+                        "name": "lang",
+                        "in": "query",
+                        "description": "2-letter ISO 3166-1 language code"
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")"
+                    },
+                    {
+                        "name": "country",
+                        "in": "query",
+                        "description": "Country code of requestor. 2-letter ISO 3166-1 country code (e.g. 'de')"
+                    },
+                    {
+                        "name": "trackingid",
+                        "in": "query",
+                        "description": "Austrian Airlines only - specify the web tracking id to be used in OS Deep link."
+                    }
+                ]
+            }
+        },
+        "\/offers\/ond\/route\/{origin}\/{destination}": {
+            "get": {
+                "summary": "OND Route",
+                "description": "Returns LH route origin & destination information",
+                "operationId": "OffersOndRouteOriginDestinationGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "origin",
+                        "in": "path",
+                        "description": "Enter either the orgin city or orgin country code (e.g 'FRA' or 'DE'). Enter '*' for all"
+                    },
+                    {
+                        "name": "destination",
+                        "in": "path",
+                        "description": "Enter either the destination city or country code (e.g 'MAD' or 'ES'). Enter '*' for all"
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")"
+                    },
+                    {
+                        "name": "catalogues",
+                        "in": "query",
+                        "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS')."
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)"
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "Number of records skipped. Defaults to 0"
+                    }
+                ]
+            }
+        },
+        "\/offers\/ond\/status": {
+            "get": {
+                "summary": "OND Status",
+                "description": "Returns LH network route status information. Search for recently added or retired routes",
+                "operationId": "OffersOndStatusGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")"
+                    },
+                    {
+                        "name": "catalogues",
+                        "in": "query",
+                        "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS')."
+                    },
+                    {
+                        "name": "new",
+                        "in": "query",
+                        "description": "Enter if newly added routes should be returned in the response. (Acceptable values are: \"\", \"true\", \"false\")"
+                    },
+                    {
+                        "name": "old",
+                        "in": "query",
+                        "description": "Enter if old (deleted) routes should be returned in the response. (Acceptable values are: \"\", \"true\", \"false\")"
+                    }
+                ]
+            }
+        },
+        "\/offers\/ond\/top": {
+            "get": {
+                "summary": "Top OND",
+                "description": "Returns LH Top routes per country or across all countries",
+                "operationId": "OffersOndTopGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")"
+                    },
+                    {
+                        "name": "catalogues",
+                        "in": "query",
+                        "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS')."
+                    },
+                    {
+                        "name": "origin",
+                        "in": "query",
+                        "description": "Enter journey origin (e.g 'FRA')."
+                    }
+                ]
+            }
+        },
+        "\/orders\/orders\/{orderID}\/{name}": {
+            "get": {
+                "summary": "Orders",
+                "description": "Retrieve order by ID and optionally name. This service is only accessible for LH privileged partners",
+                "operationId": "Orders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "orderID",
+                        "in": "path",
+                        "description": "Unique order identifier"
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")"
+                    },
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Surname of traveller"
+                    }
+                ]
+            }
+        },
+        "\/preflight\/autocheckin\/{ticketnumber}": {
+            "put": {
+                "summary": "Auto Check-In",
+                "description": "Trigger an automatic check-in given a ticket number. This service is only accessible for LH privileged partners",
+                "operationId": "PreflightAutocheckinTicketnumberPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "ticketnumber",
+                        "in": "path",
+                        "description": "Ticket number"
+                    },
+                    {
+                        "name": "emailAddress",
+                        "in": "query",
+                        "description": "Email address"
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")"
+                    }
+                ]
+            }
+        },
+        "\/promotions\/priceoffers\/flights\/ond\/{origin}\/{destination}": {
+            "get": {
+                "summary": "Price Offers",
+                "description": "Retrieve a best price offer given an origin and destination.",
+                "operationId": "PromotionsPriceoffersFlightsOndOriginDestinationGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "origin",
+                        "in": "path",
+                        "description": "Enter either the orgin city or orgin country code (e.g 'FRA' or 'DE'). Enter '*' for all"
+                    },
+                    {
+                        "name": "destination",
+                        "in": "path",
+                        "description": "Enter either the destination city or country code (e.g 'MAD' or 'ES'). Enter '*' for all"
+                    },
+                    {
+                        "name": "departureDate",
+                        "in": "query",
+                        "description": "Departure date in local time (YYYY-MM-DD)"
+                    },
+                    {
+                        "name": "returnDate",
+                        "in": "query",
+                        "description": "Return date in local time (YYYY-MM-DD)"
+                    },
+                    {
+                        "name": "service",
+                        "in": "query",
+                        "description": "Optional parameter."
+                    }
+                ]
+            }
+        },
+        "\/references\/seatdetails\/{aircraftCode}\/{cabinCode}": {
+            "get": {
+                "summary": "Seat Details",
+                "description": "A description of all available seat details by aircraft type. You can retrieve the full set or details for a particular aircraft type.",
+                "operationId": "ReferencesSeatdetailsAircraftCodeCabinCodeGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "aircraftCode",
+                        "in": "path",
+                        "description": "Aircraft type. 3-character IATA equipment code"
+                    },
+                    {
+                        "name": "Accept",
+                        "in": "header",
+                        "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")"
+                    },
+                    {
+                        "name": "cabinCode",
+                        "in": "path",
+                        "description": "Cabin class: M, E, C, F (Acceptable values are: \"\", \"M\", \"E\", \"C\", \"F\")"
+                    },
+                    {
+                        "name": "lang",
+                        "in": "query",
+                        "description": "2-letter ISO 3166-1 language code"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
