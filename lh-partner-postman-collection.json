@@ -1,0 +1,1244 @@
+{
+    "id": "3ef21e738f67a7735e22424a211d2ec9",
+    "name": "LH Partner",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "b4fd2821eaa3f9d9f736833b96eb3c79",
+            "name": "Baggage Trip and Contact",
+            "url": "httpsapi.lufthansa.com\/v1\/baggage\/baggagetripandcontact\/{searchID}",
+            "description": "Retrieve passenger trip, contact and baggage details. This service is only accessible for LH privileged partners",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "searchID",
+                    "description": "Bag tag number, PNR, boarding card or FQTV ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Accept",
+                    "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "rawModeData": ""
+        },
+        {
+            "id": "e64a8700fc104280af24a050409b88d3",
+            "name": "All Fares",
+            "url": "httpsapi.lufthansa.com\/v1\/offers\/fares\/allfares",
+            "description": "Retrieves all available fares for a specific Origin & Destination pair on a given date. Available fares are: One-way and Return for 4U. Return only for OS",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "catalogues",
+                    "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "origin",
+                    "description": "Enter journey origin (e.g 'FRA').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "destination",
+                    "description": "Enter journey destination (e.g 'MAD').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "travel",
+                    "description": "Enter journey travel-date (e.g 2016-10-20)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "return",
+                    "description": "Enter journey return-date (e.g 2016-10-31)'.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "cabin",
+                    "description": "Enter the required cabin class (e.g econonmy, business etc.). (Acceptable values are: \"\", \"economy\", \"premium economy\", \"business\", \"first\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "travelers",
+                    "description": "Specifies the type and number of travelers (e.g. '(adult=2;child=2;infant=1)') For LH only (adult=1) possible.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fare",
+                    "description": "Mandatory for 4U. Specifies, which fares to be returned, such as basic, smart, best, smartflex, bestflex . (Acceptable values are: \"\", \"basic\", \"smart\", \"best\", \"smartflex\", \"bestflex\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "trackingid",
+                    "description": "Austrian Airlines only - specify the web tracking id to be used in OS Deep link.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Accept",
+                    "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "rawModeData": ""
+        },
+        {
+            "id": "2f5f4b78bf65ab99eedf2881a2d861e1",
+            "name": "Best Fares",
+            "url": "httpsapi.lufthansa.com\/v1\/offers\/fares\/bestfares",
+            "description": "Retrieve best fares for the requested journey across multiple days or multiple months.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "catalogues",
+                    "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "origin",
+                    "description": "Enter journey origin (e.g 'FRA').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "destination",
+                    "description": "Enter journey destination (e.g 'MAD').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "travel",
+                    "description": "Enter journey travel-date (e.g 2016-10-20)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "trip",
+                    "description": "Trip duration in days (e.g. '7')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "range",
+                    "description": "Fare range: 'byday' or 'bymonth' (Acceptable values are: \"byday\", \"bymonth\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Accept",
+                    "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "cabin",
+                    "description": "Enter the required cabin class (e.g econonmy, business etc.). (Acceptable values are: \"\", \"economy\", \"premium economy\", \"business\", \"first\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "country",
+                    "description": "Country code of requestor. 2-letter ISO 3166-1 country code (e.g. 'de')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "trackingid",
+                    "description": "Austrian Airlines only - specify the web tracking id to be used in OS Deep link.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fare",
+                    "description": "Mandatory for 4U. Specifies, which fares to be returned, such as basic, smart, best, smartflex, bestflex . (Acceptable values are: \"\", \"basic\", \"smart\", \"best\", \"smartflex\", \"bestflex\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "rawModeData": ""
+        },
+        {
+            "id": "a02cdd7a924774b46523fc2c8427ece3",
+            "name": "Deep Links",
+            "url": "httpsapi.lufthansa.com\/v1\/offers\/fares\/deeplink",
+            "description": "Returns valid deep links for the provided input parameters",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "catalogues",
+                    "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "trackingid",
+                    "description": "Austrian Airlines only - specify the web tracking id to be used in OS Deep link.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "country",
+                    "description": "Country code of requestor. 2-letter ISO 3166-1 country code (e.g. 'de')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "lang",
+                    "description": "2-letter ISO 3166-1 language code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Accept",
+                    "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "origin",
+                    "description": "Enter journey origin (e.g 'FRA').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "destination",
+                    "description": "Enter journey destination (e.g 'MAD').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "travel",
+                    "description": "Enter journey travel-date (e.g 2016-10-20)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "return",
+                    "description": "Enter journey return-date (e.g 2016-10-31)'.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "cabin",
+                    "description": "Enter the required cabin class (e.g econonmy, business etc.). (Acceptable values are: \"\", \"economy\", \"premium economy\", \"business\", \"first\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "outbound",
+                    "description": "Outbound flight segments in the sequence of travel (e.g. 'LH096;LH480')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "travelers",
+                    "description": "Specifies the type and number of travelers (e.g. '(adult=2;child=2;infant=1)') For LH only (adult=1) possible.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fare",
+                    "description": "Mandatory for 4U. Specifies, which fares to be returned, such as basic, smart, best, smartflex, bestflex . (Acceptable values are: \"\", \"basic\", \"smart\", \"best\", \"smartflex\", \"bestflex\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "net",
+                    "description": "Travel net fare. Total fare less taxes and charges (e.g. '1140')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partnerid",
+                    "description": "Deep link partner id (e.g. '1247')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "encryption",
+                    "description": "Deep link encryption-key",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "rawModeData": ""
+        },
+        {
+            "id": "3b18c2c62a74f5653ac280c5d3645aea",
+            "name": "LH Deep Links - FFP",
+            "url": "httpsapi.lufthansa.com\/v1\/offers\/fares\/deeplink\/ffp",
+            "description": "Returns valid LH deep links (FFP - links to flight selection screen on LH.COM)",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "catalogues",
+                    "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "origin",
+                    "description": "Enter journey origin (e.g 'FRA').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "destination",
+                    "description": "Enter journey destination (e.g 'MAD').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "travel",
+                    "description": "Enter journey travel-date (e.g 2016-10-20)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "trackingid",
+                    "description": "Austrian Airlines only - specify the web tracking id to be used in OS Deep link.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "country",
+                    "description": "Country code of requestor. 2-letter ISO 3166-1 country code (e.g. 'de')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "lang",
+                    "description": "2-letter ISO 3166-1 language code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Accept",
+                    "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "return",
+                    "description": "Enter journey return-date (e.g 2016-10-31)'.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "cabin",
+                    "description": "Enter the required cabin class (e.g econonmy, business etc.). (Acceptable values are: \"\", \"economy\", \"premium economy\", \"business\", \"first\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "travelers",
+                    "description": "Specifies the type and number of travelers (e.g. '(adult=2;child=2;infant=1)') For LH only (adult=1) possible.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partnerid",
+                    "description": "Deep link partner id (e.g. '1247')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "encryption",
+                    "description": "Deep link encryption-key",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "rawModeData": ""
+        },
+        {
+            "id": "579ce8e6073dd72816424f6a16c2e2e6",
+            "name": "LH Deep Links - ITCO",
+            "url": "httpsapi.lufthansa.com\/v1\/offers\/fares\/deeplink\/itco",
+            "description": "Returns valid LH deep links (ITCO - links to shopping cart on LH.COM)",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "catalogues",
+                    "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "origin",
+                    "description": "Enter journey origin (e.g 'FRA').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "destination",
+                    "description": "Enter journey destination (e.g 'MAD').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "travel",
+                    "description": "Enter journey travel-date (e.g 2016-10-20)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "outbound",
+                    "description": "Outbound flight segments in the sequence of travel (e.g. 'LH096;LH480')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fare",
+                    "description": "Mandatory for 4U. Specifies, which fares to be returned, such as basic, smart, best, smartflex, bestflex . (Acceptable values are: \"\", \"basic\", \"smart\", \"best\", \"smartflex\", \"bestflex\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "trackingid",
+                    "description": "Austrian Airlines only - specify the web tracking id to be used in OS Deep link.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "country",
+                    "description": "Country code of requestor. 2-letter ISO 3166-1 country code (e.g. 'de')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "lang",
+                    "description": "2-letter ISO 3166-1 language code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Accept",
+                    "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "return",
+                    "description": "Enter journey return-date (e.g 2016-10-31)'.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "cabin",
+                    "description": "Enter the required cabin class (e.g econonmy, business etc.). (Acceptable values are: \"\", \"economy\", \"premium economy\", \"business\", \"first\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "travelers",
+                    "description": "Specifies the type and number of travelers (e.g. '(adult=2;child=2;infant=1)') For LH only (adult=1) possible.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "net",
+                    "description": "Travel net fare. Total fare less taxes and charges (e.g. '1140')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "partnerid",
+                    "description": "Deep link partner id (e.g. '1247')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "encryption",
+                    "description": "Deep link encryption-key",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "rawModeData": ""
+        },
+        {
+            "id": "9dc7a5850b7df3b881a2ab2079f68583",
+            "name": "Fares",
+            "url": "httpsapi.lufthansa.com\/v1\/offers\/fares\/fares",
+            "description": "Retrieve all available fares per fare family for a specific Origin & Destination on a given date",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "catalogues",
+                    "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "segments",
+                    "description": "Journey details  e.g. (origin=TXL;destination=CGN;travel-date=2016-12-15;return-date=2016-12-20;cabin=Economy)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "carriers",
+                    "description": "Include fares for these carriers e.g. ('4U;LH')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Accept",
+                    "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "travelers",
+                    "description": "Specifies the type and number of travelers (e.g. '(adult=2;child=2;infant=1)') For LH only (adult=1) possible.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fare",
+                    "description": "Mandatory for 4U. Specifies, which fares to be returned, such as basic, smart, best, smartflex, bestflex . (Acceptable values are: \"\", \"basic\", \"smart\", \"best\", \"smartflex\", \"bestflex\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "rawModeData": ""
+        },
+        {
+            "id": "c18086f0c2c922c413c7470dbc58b524",
+            "name": "Lowest Fares",
+            "url": "httpsapi.lufthansa.com\/v1\/offers\/fares\/lowestfares",
+            "description": "Retrieve lowest fare for a specific Origin & Destination pair on a given date. Available fares are: One-way and Return for 4U. Return only for OS & LH",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "catalogues",
+                    "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "origin",
+                    "description": "Enter journey origin (e.g 'FRA').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "destination",
+                    "description": "Enter journey destination (e.g 'MAD').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "travel",
+                    "description": "Enter journey travel-date (e.g 2016-10-20)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Accept",
+                    "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "return",
+                    "description": "Enter journey return-date (e.g 2016-10-31)'.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "cabin",
+                    "description": "Enter the required cabin class (e.g econonmy, business etc.). (Acceptable values are: \"\", \"economy\", \"premium economy\", \"business\", \"first\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "travelers",
+                    "description": "Specifies the type and number of travelers (e.g. '(adult=2;child=2;infant=1)') For LH only (adult=1) possible.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fare",
+                    "description": "Mandatory for 4U. Specifies, which fares to be returned, such as basic, smart, best, smartflex, bestflex . (Acceptable values are: \"\", \"basic\", \"smart\", \"best\", \"smartflex\", \"bestflex\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "country",
+                    "description": "Country code of requestor. 2-letter ISO 3166-1 country code (e.g. 'de')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "rawModeData": ""
+        },
+        {
+            "id": "247960a9cd45019a6bbb1401e9f3f712",
+            "name": "Fares Subscriptions",
+            "url": "httpsapi.lufthansa.com\/v1\/offers\/fares\/subscriptions",
+            "description": "Create a subscription for best price O&D. Receive regular updates on lowest fares",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "origin",
+                    "description": "Enter journey origin (e.g 'FRA').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "destination",
+                    "description": "Enter journey destination (e.g 'MAD').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "cabin",
+                    "description": "Enter the required cabin class (e.g econonmy, business etc.). (Acceptable values are: \"\", \"economy\", \"premium economy\", \"business\", \"first\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "trip",
+                    "description": "Trip duration in days (e.g. '7')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "email",
+                    "description": "Email Address')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "lang",
+                    "description": "2-letter ISO 3166-1 language code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Accept",
+                    "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "country",
+                    "description": "Country code of requestor. 2-letter ISO 3166-1 country code (e.g. 'de')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "trackingid",
+                    "description": "Austrian Airlines only - specify the web tracking id to be used in OS Deep link.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "rawModeData": ""
+        },
+        {
+            "id": "9bde80a2de39eb788a9493c6c4fb45a8",
+            "name": "OND Route",
+            "url": "httpsapi.lufthansa.com\/v1\/offers\/ond\/route\/{origin}\/{destination}",
+            "description": "Returns LH route origin & destination information",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "origin",
+                    "description": "Enter either the orgin city or orgin country code (e.g 'FRA' or 'DE'). Enter '*' for all",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "destination",
+                    "description": "Enter either the destination city or country code (e.g 'MAD' or 'ES'). Enter '*' for all",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Accept",
+                    "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "catalogues",
+                    "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "offset",
+                    "description": "Number of records skipped. Defaults to 0",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "rawModeData": ""
+        },
+        {
+            "id": "c7a63d72eb01744698a6528a0f276399",
+            "name": "OND Status",
+            "url": "httpsapi.lufthansa.com\/v1\/offers\/ond\/status",
+            "description": "Returns LH network route status information. Search for recently added or retired routes",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Accept",
+                    "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "catalogues",
+                    "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "new",
+                    "description": "Enter if newly added routes should be returned in the response. (Acceptable values are: \"\", \"true\", \"false\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "old",
+                    "description": "Enter if old (deleted) routes should be returned in the response. (Acceptable values are: \"\", \"true\", \"false\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "rawModeData": ""
+        },
+        {
+            "id": "25e7d046b83c79051e8e5aec08934088",
+            "name": "Top OND",
+            "url": "httpsapi.lufthansa.com\/v1\/offers\/ond\/top",
+            "description": "Returns LH Top routes per country or across all countries",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Accept",
+                    "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "catalogues",
+                    "description": "Specifies in which catalogue the fares need to be searched (e.g.'4U;OS').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "origin",
+                    "description": "Enter journey origin (e.g 'FRA').",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "rawModeData": ""
+        },
+        {
+            "id": "db2c756e77dd76c62e59cd6dcf8954b1",
+            "name": "Orders",
+            "url": "httpsapi.lufthansa.com\/v1\/orders\/orders\/{orderID}\/{name}",
+            "description": "Retrieve order by ID and optionally name. This service is only accessible for LH privileged partners",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "orderID",
+                    "description": "Unique order identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Accept",
+                    "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "name",
+                    "description": "Surname of traveller",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "rawModeData": ""
+        },
+        {
+            "id": "ebfd7827efee2cb1cd5c32cca8dbb798",
+            "name": "Auto Check-In",
+            "url": "httpsapi.lufthansa.com\/v1\/preflight\/autocheckin\/{ticketnumber}",
+            "description": "Trigger an automatic check-in given a ticket number. This service is only accessible for LH privileged partners",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ticketnumber",
+                    "description": "Ticket number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "emailAddress",
+                    "description": "Email address",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Accept",
+                    "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "rawModeData": ""
+        },
+        {
+            "id": "22c5a08140b48d242432623233d699c5",
+            "name": "Price Offers",
+            "url": "httpsapi.lufthansa.com\/v1\/promotions\/priceoffers\/flights\/ond\/{origin}\/{destination}",
+            "description": "Retrieve a best price offer given an origin and destination.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "origin",
+                    "description": "Enter either the orgin city or orgin country code (e.g 'FRA' or 'DE'). Enter '*' for all",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "destination",
+                    "description": "Enter either the destination city or country code (e.g 'MAD' or 'ES'). Enter '*' for all",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "departureDate",
+                    "description": "Departure date in local time (YYYY-MM-DD)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "returnDate",
+                    "description": "Return date in local time (YYYY-MM-DD)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "service",
+                    "description": "Optional parameter.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "rawModeData": ""
+        },
+        {
+            "id": "09d0abac9292ae3ec40347fe31759e67",
+            "name": "Seat Details",
+            "url": "httpsapi.lufthansa.com\/v1\/references\/seatdetails\/{aircraftCode}\/{cabinCode}",
+            "description": "A description of all available seat details by aircraft type. You can retrieve the full set or details for a particular aircraft type.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "aircraftCode",
+                    "description": "Aircraft type. 3-character IATA equipment code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Accept",
+                    "description": "http header: application\/json or application\/xml (Acceptable values are: \"application\/json\", \"application\/xml\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "cabinCode",
+                    "description": "Cabin class: M, E, C, F (Acceptable values are: \"\", \"M\", \"E\", \"C\", \"F\")",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "lang",
+                    "description": "2-letter ISO 3166-1 language code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "rawModeData": ""
+        }
+    ]
+}
