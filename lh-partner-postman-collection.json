@@ -1,5 +1,5 @@
 {
-    "id": "3ef21e738f67a7735e22424a211d2ec9",
+    "id": "ae2b65a5d1da7e8983d6a7174ce7f59f",
     "name": "LH Partner",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "b4fd2821eaa3f9d9f736833b96eb3c79",
+            "id": "bbc9729f6b13f67269a8c92588b3c4ad",
             "name": "Baggage Trip and Contact",
             "url": "httpsapi.lufthansa.com\/v1\/baggage\/baggagetripandcontact\/{searchID}",
             "description": "Retrieve passenger trip, contact and baggage details. This service is only accessible for LH privileged partners",
@@ -44,11 +44,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "collectionId": "ae2b65a5d1da7e8983d6a7174ce7f59f",
             "rawModeData": ""
         },
         {
-            "id": "e64a8700fc104280af24a050409b88d3",
+            "id": "89ea12556ed782caa54593939681573d",
             "name": "All Fares",
             "url": "httpsapi.lufthansa.com\/v1\/offers\/fares\/allfares",
             "description": "Retrieves all available fares for a specific Origin & Destination pair on a given date. Available fares are: One-way and Return for 4U. Return only for OS",
@@ -138,11 +138,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "collectionId": "ae2b65a5d1da7e8983d6a7174ce7f59f",
             "rawModeData": ""
         },
         {
-            "id": "2f5f4b78bf65ab99eedf2881a2d861e1",
+            "id": "a9ee5f26893092b7143ceab32bcd1e98",
             "name": "Best Fares",
             "url": "httpsapi.lufthansa.com\/v1\/offers\/fares\/bestfares",
             "description": "Retrieve best fares for the requested journey across multiple days or multiple months.",
@@ -239,11 +239,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "collectionId": "ae2b65a5d1da7e8983d6a7174ce7f59f",
             "rawModeData": ""
         },
         {
-            "id": "a02cdd7a924774b46523fc2c8427ece3",
+            "id": "7b6a5744465946c83ee86bbacaf06a5f",
             "name": "Deep Links",
             "url": "httpsapi.lufthansa.com\/v1\/offers\/fares\/deeplink",
             "description": "Returns valid deep links for the provided input parameters",
@@ -375,11 +375,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "collectionId": "ae2b65a5d1da7e8983d6a7174ce7f59f",
             "rawModeData": ""
         },
         {
-            "id": "3b18c2c62a74f5653ac280c5d3645aea",
+            "id": "5c33488f101821cea605625fcbed1cde",
             "name": "LH Deep Links - FFP",
             "url": "httpsapi.lufthansa.com\/v1\/offers\/fares\/deeplink\/ffp",
             "description": "Returns valid LH deep links (FFP - links to flight selection screen on LH.COM)",
@@ -490,11 +490,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "collectionId": "ae2b65a5d1da7e8983d6a7174ce7f59f",
             "rawModeData": ""
         },
         {
-            "id": "579ce8e6073dd72816424f6a16c2e2e6",
+            "id": "d5bca90b8fc897216516c32c169cd73c",
             "name": "LH Deep Links - ITCO",
             "url": "httpsapi.lufthansa.com\/v1\/offers\/fares\/deeplink\/itco",
             "description": "Returns valid LH deep links (ITCO - links to shopping cart on LH.COM)",
@@ -626,11 +626,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "collectionId": "ae2b65a5d1da7e8983d6a7174ce7f59f",
             "rawModeData": ""
         },
         {
-            "id": "9dc7a5850b7df3b881a2ab2079f68583",
+            "id": "9ba9d6225679616b555de9d8d7621259",
             "name": "Fares",
             "url": "httpsapi.lufthansa.com\/v1\/offers\/fares\/fares",
             "description": "Retrieve all available fares per fare family for a specific Origin & Destination on a given date",
@@ -692,11 +692,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "collectionId": "ae2b65a5d1da7e8983d6a7174ce7f59f",
             "rawModeData": ""
         },
         {
-            "id": "c18086f0c2c922c413c7470dbc58b524",
+            "id": "514d0c9249383d147122c7b666e79dc2",
             "name": "Lowest Fares",
             "url": "httpsapi.lufthansa.com\/v1\/offers\/fares\/lowestfares",
             "description": "Retrieve lowest fare for a specific Origin & Destination pair on a given date. Available fares are: One-way and Return for 4U. Return only for OS & LH",
@@ -786,11 +786,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "collectionId": "ae2b65a5d1da7e8983d6a7174ce7f59f",
             "rawModeData": ""
         },
         {
-            "id": "247960a9cd45019a6bbb1401e9f3f712",
+            "id": "04a8f196d541c8135c08d154ec64c8a0",
             "name": "Fares Subscriptions",
             "url": "httpsapi.lufthansa.com\/v1\/offers\/fares\/subscriptions",
             "description": "Create a subscription for best price O&D. Receive regular updates on lowest fares",
@@ -873,11 +873,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "collectionId": "ae2b65a5d1da7e8983d6a7174ce7f59f",
             "rawModeData": ""
         },
         {
-            "id": "9bde80a2de39eb788a9493c6c4fb45a8",
+            "id": "91a16b21f512ea0217cded06db0db27c",
             "name": "OND Route",
             "url": "httpsapi.lufthansa.com\/v1\/offers\/ond\/route\/{origin}\/{destination}",
             "description": "Returns LH route origin & destination information",
@@ -939,11 +939,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "collectionId": "ae2b65a5d1da7e8983d6a7174ce7f59f",
             "rawModeData": ""
         },
         {
-            "id": "c7a63d72eb01744698a6528a0f276399",
+            "id": "a3d3c43fdc44e5470b5143e697f1d732",
             "name": "OND Status",
             "url": "httpsapi.lufthansa.com\/v1\/offers\/ond\/status",
             "description": "Returns LH network route status information. Search for recently added or retired routes",
@@ -991,11 +991,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "collectionId": "ae2b65a5d1da7e8983d6a7174ce7f59f",
             "rawModeData": ""
         },
         {
-            "id": "25e7d046b83c79051e8e5aec08934088",
+            "id": "b565fc3feab4d3c4ef1ff55b0fbad56a",
             "name": "Top OND",
             "url": "httpsapi.lufthansa.com\/v1\/offers\/ond\/top",
             "description": "Returns LH Top routes per country or across all countries",
@@ -1036,11 +1036,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "collectionId": "ae2b65a5d1da7e8983d6a7174ce7f59f",
             "rawModeData": ""
         },
         {
-            "id": "db2c756e77dd76c62e59cd6dcf8954b1",
+            "id": "ff136fa3492f1d561c73376984f0dffc",
             "name": "Orders",
             "url": "httpsapi.lufthansa.com\/v1\/orders\/orders\/{orderID}\/{name}",
             "description": "Retrieve order by ID and optionally name. This service is only accessible for LH privileged partners",
@@ -1081,11 +1081,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "collectionId": "ae2b65a5d1da7e8983d6a7174ce7f59f",
             "rawModeData": ""
         },
         {
-            "id": "ebfd7827efee2cb1cd5c32cca8dbb798",
+            "id": "cb3fa0efbbd12b12289f984b29df293a",
             "name": "Auto Check-In",
             "url": "httpsapi.lufthansa.com\/v1\/preflight\/autocheckin\/{ticketnumber}",
             "description": "Trigger an automatic check-in given a ticket number. This service is only accessible for LH privileged partners",
@@ -1126,11 +1126,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "collectionId": "ae2b65a5d1da7e8983d6a7174ce7f59f",
             "rawModeData": ""
         },
         {
-            "id": "22c5a08140b48d242432623233d699c5",
+            "id": "7fbc621d3f371c6152d5fb250b03df08",
             "name": "Price Offers",
             "url": "httpsapi.lufthansa.com\/v1\/promotions\/priceoffers\/flights\/ond\/{origin}\/{destination}",
             "description": "Retrieve a best price offer given an origin and destination.",
@@ -1185,11 +1185,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "collectionId": "ae2b65a5d1da7e8983d6a7174ce7f59f",
             "rawModeData": ""
         },
         {
-            "id": "09d0abac9292ae3ec40347fe31759e67",
+            "id": "91d0f3d1e72cf3347fdcc9750bdf23e2",
             "name": "Seat Details",
             "url": "httpsapi.lufthansa.com\/v1\/references\/seatdetails\/{aircraftCode}\/{cabinCode}",
             "description": "A description of all available seat details by aircraft type. You can retrieve the full set or details for a particular aircraft type.",
@@ -1237,7 +1237,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "3ef21e738f67a7735e22424a211d2ec9",
+            "collectionId": "ae2b65a5d1da7e8983d6a7174ce7f59f",
             "rawModeData": ""
         }
     ]
