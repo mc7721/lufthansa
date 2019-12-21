@@ -10,8 +10,8 @@
         "have swagger",
         "relative data"
     ],
-    "created": "2019-12-19",
-    "modified": "2019-12-19",
+    "created": "2019-12-21",
+    "modified": "2019-12-21",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/lufthansa\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
@@ -25,7 +25,7 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/lh-public-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/lufthansa\/master\/lh-public-openapi.json"
                 },
                 {
                     "type": "x-openapi",
@@ -43,7 +43,7 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/lh-public-api-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/lufthansa\/master\/lh-public-api-openapi.json"
                 },
                 {
                     "type": "x-openapi",
@@ -61,7 +61,7 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/lh-partner-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/lufthansa\/master\/lh-partner-openapi.json"
                 },
                 {
                     "type": "x-openapi",
@@ -72,6 +72,10 @@
     ],
     "include": [],
     "x-common": [
+        {
+            "type": "APIs.json",
+            "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/apis.json"
+        },
         {
             "type": "Crunchbase",
             "url": "https:\/\/crunchbase.com\/organization\/lufthansa"
