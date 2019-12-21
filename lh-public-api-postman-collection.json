@@ -1,5 +1,5 @@
 {
-    "id": "28dfb1bcd70d9a5ce4a76904cd242fac",
+    "id": "78f108693e1b5db5659bedd7a66de638",
     "name": "LH Public API",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "ae6f7d58d28072d4cc495e23f06736a9",
+            "id": "4a8066cda289472fb7eadd4872e91c99",
             "name": "Countries",
             "url": "http:\/\/api.lufthansa.com\/v1\/references\/countries\/{countryCode}",
             "description": "List all countries or one specific country. It is possible to request the response in a specific language.",
@@ -58,11 +58,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "collectionId": "78f108693e1b5db5659bedd7a66de638",
             "rawModeData": ""
         },
         {
-            "id": "86d15e220e2a5f827b03847622f4355b",
+            "id": "21b81522b2e511ae7199c6962091c17a",
             "name": "Cities",
             "url": "http:\/\/api.lufthansa.com\/v1\/references\/cities\/{cityCode}",
             "description": "List all cities or one specific city. It is possible to request the response in a specific language.",
@@ -110,11 +110,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "collectionId": "78f108693e1b5db5659bedd7a66de638",
             "rawModeData": ""
         },
         {
-            "id": "af041416473e78c09716aa2a9812bf56",
+            "id": "d558d87b71bfc8a4d5833b9ced207a9d",
             "name": "Airports",
             "url": "http:\/\/api.lufthansa.com\/v1\/references\/airports\/{airportCode}",
             "description": "List all airports or one specific airport. All airports response is very large. It is possible to request the response in a specific language.",
@@ -169,11 +169,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "collectionId": "78f108693e1b5db5659bedd7a66de638",
             "rawModeData": ""
         },
         {
-            "id": "b5d53fb3d6ab29aa33a985b8cf9b9041",
+            "id": "f8096c4a05105226622295f6e3162a40",
             "name": "Nearest Airports",
             "url": "http:\/\/api.lufthansa.com\/v1\/references\/airports\/nearest\/{latitude},{longitude}",
             "description": "List the 5 closest airports to the given latitude and longitude, irrespective of the radius of the reference point.",
@@ -214,11 +214,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "collectionId": "78f108693e1b5db5659bedd7a66de638",
             "rawModeData": ""
         },
         {
-            "id": "c83e393b5ed5a17c56e2b894aa6a4d8e",
+            "id": "8f5b6e9e28b785893cdf6ce4780faf21",
             "name": "Airlines",
             "url": "http:\/\/api.lufthansa.com\/v1\/references\/airlines\/{airlineCode}",
             "description": "List all airlines or one specific airline.",
@@ -259,11 +259,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "collectionId": "78f108693e1b5db5659bedd7a66de638",
             "rawModeData": ""
         },
         {
-            "id": "5ba585c471f17e489874d6efa4ac26bd",
+            "id": "d6b863df9ea613336f4532544d65deac",
             "name": "Aircraft",
             "url": "http:\/\/api.lufthansa.com\/v1\/references\/aircraft\/{aircraftCode}",
             "description": "List all aircraft types or one specific aircraft type.",
@@ -304,11 +304,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "collectionId": "78f108693e1b5db5659bedd7a66de638",
             "rawModeData": ""
         },
         {
-            "id": "deca213057111b870b336f2a82630a78",
+            "id": "31d74a600ef21f5f16233b0e14b83dcf",
             "name": "Seat Maps",
             "url": "http:\/\/api.lufthansa.com\/v1\/offers\/seatmaps\/{flightNumber}\/{origin}\/{destination}\/{date}\/{cabinClass}",
             "description": "Cabin layout and seat characteristics.",
@@ -363,11 +363,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "collectionId": "78f108693e1b5db5659bedd7a66de638",
             "rawModeData": ""
         },
         {
-            "id": "de29c53fe8560f89ae346b076642dc0e",
+            "id": "979f31e90fc200e9d86cb84709cf0dea",
             "name": "Lounges",
             "url": "http:\/\/api.lufthansa.com\/v1\/offers\/lounges\/{location}",
             "description": "Lounge information",
@@ -415,11 +415,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "collectionId": "78f108693e1b5db5659bedd7a66de638",
             "rawModeData": ""
         },
         {
-            "id": "fc709b11c21d822c3e0dd442bd15d22f",
+            "id": "92609e2565066a3bef038723895eea07",
             "name": "Flight Status",
             "url": "http:\/\/api.lufthansa.com\/v1\/operations\/flightstatus\/{flightNumber}\/{date}",
             "description": "Status of a particular flight (boarding, delayed, etc.).",
@@ -467,11 +467,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "collectionId": "78f108693e1b5db5659bedd7a66de638",
             "rawModeData": ""
         },
         {
-            "id": "b5bda5be9da7717b54a682dc53f81304",
+            "id": "2f52ebf0cc13b1d895d7281e3a31f509",
             "name": "Flight Status by Route",
             "url": "http:\/\/api.lufthansa.com\/v1\/operations\/flightstatus\/route\/{origin}\/{destination}\/{date}",
             "description": "Status of flights between a given origin and destination on a given date.",
@@ -526,11 +526,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "collectionId": "78f108693e1b5db5659bedd7a66de638",
             "rawModeData": ""
         },
         {
-            "id": "7366f322db2ee2ce72e448b5999ed7a1",
+            "id": "83967770e62a5e49a37e03d7e482c3e6",
             "name": "Flight Status at Arrival Airport",
             "url": "http:\/\/api.lufthansa.com\/v1\/operations\/flightstatus\/arrivals\/{airportCode}\/{fromDateTime}",
             "description": "Status of all arrivals at a given airport up to 4 hours from the provided date time.",
@@ -578,11 +578,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "collectionId": "78f108693e1b5db5659bedd7a66de638",
             "rawModeData": ""
         },
         {
-            "id": "7c0efb3225910c9e02c3cd4758ede959",
+            "id": "225a32407b5cc3d66a9e4924d8632848",
             "name": "Flight Status at Departure Airport",
             "url": "http:\/\/api.lufthansa.com\/v1\/operations\/flightstatus\/departures\/{airportCode}\/{fromDateTime}",
             "description": "Status of all departures from a given airport up to 4 hours from the provided date time.",
@@ -630,11 +630,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "collectionId": "78f108693e1b5db5659bedd7a66de638",
             "rawModeData": ""
         },
         {
-            "id": "6a64f073d917ddb38a88c5ac43b70a26",
+            "id": "83ed21521c43841e3ad9cad26b0dadee",
             "name": "Flight Schedules",
             "url": "http:\/\/api.lufthansa.com\/v1\/operations\/schedules\/{origin}\/{destination}\/{fromDateTime}",
             "description": "Scheduled flights between given airports on a given date.",
@@ -696,11 +696,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "collectionId": "78f108693e1b5db5659bedd7a66de638",
             "rawModeData": ""
         },
         {
-            "id": "47205e88b3d0ae68fab3f29930c75f27",
+            "id": "6333f296de16c4513f9e5bd3817d67fd",
             "name": "Shipment Tracking",
             "url": "http:\/\/api.lufthansa.com\/v1\/cargo\/shipmentTracking\/{aWBPrefix}-{aWBNumber}",
             "description": "With this tracking service you can easily retrieve your shipment or flight status information.",
@@ -734,11 +734,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "collectionId": "78f108693e1b5db5659bedd7a66de638",
             "rawModeData": ""
         },
         {
-            "id": "33cdc8b83e04c581202dde8fccee9eb7",
+            "id": "fed27576f60d1ae4177e2c2cdc88154b",
             "name": "Retrieve all flights",
             "url": "http:\/\/api.lufthansa.com\/v1\/cargo\/getRoute\/{origin}-{destination}\/{fromDate}\/{productCode}",
             "description": "Retrieve a list of all possible flights (both direct and connecting) between two airports on a given date. Routes are available for today and up to days in the future.",
@@ -786,7 +786,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "28dfb1bcd70d9a5ce4a76904cd242fac",
+            "collectionId": "78f108693e1b5db5659bedd7a66de638",
             "rawModeData": ""
         }
     ]
